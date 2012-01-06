@@ -1,6 +1,6 @@
 require "rake/rdoctask"
 require "rake/testtask"
-require "lib/ruport/version"
+require_relative "lib/ruport/version"
 
 begin
   require "rubygems"
@@ -32,7 +32,6 @@ begin
     gemspec.homepage = 'http://rubyreports.org'
     gemspec.authors = ['Gregory Brown', 'Mike Milner', 'Andrew France']
     gemspec.rdoc_options = ['--title', 'Ruport Documentation', '--main', 'README.rdoc', '-q']
-    gemspec.add_dependency 'fastercsv'
     gemspec.add_dependency 'pdf-writer', '= 1.1.8'
   end
 rescue LoadError

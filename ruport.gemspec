@@ -4,17 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{ruport}
+  s.name = "ruport"
   s.version = "1.7.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Gregory Brown", "Mike Milner", "Andrew France"]
-  s.date = %q{2011-01-07}
-  s.description = %q{      Ruby Reports is a software library that aims to make the task of reporting
-      less tedious and painful. It provides tools for data acquisition,
-      database interaction, formatting, and parsing/munging.
-}
-  s.email = %q{gregory.t.brown@gmail.com}
+  s.date = "2012-01-06"
+  s.description = "      Ruby Reports is a software library that aims to make the task of reporting\n      less tedious and painful. It provides tools for data acquisition,\n      database interaction, formatting, and parsing/munging.\n"
+  s.email = "gregory.t.brown@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE",
     "README.rdoc"
@@ -69,6 +66,7 @@ Gem::Specification.new do |s|
     "lib/ruport/formatter/text.rb",
     "lib/ruport/version.rb",
     "lib/uport.rb",
+    "ruport.gemspec",
     "test/controller_test.rb",
     "test/csv_formatter_test.rb",
     "test/data_feeder_test.rb",
@@ -109,57 +107,22 @@ Gem::Specification.new do |s|
     "util/release/freshmeat.rb",
     "util/release/raa.rb"
   ]
-  s.homepage = %q{http://rubyreports.org}
+  s.homepage = "http://rubyreports.org"
   s.rdoc_options = ["--title", "Ruport Documentation", "--main", "README.rdoc", "-q"]
   s.require_paths = ["lib"]
-  s.rubyforge_project = %q{ruport}
-  s.rubygems_version = %q{1.3.7}
-  s.summary = %q{A generalized Ruby report generation and templating engine.}
-  s.test_files = [
-    "examples/add_row_table.rb",
-    "examples/anon.rb",
-    "examples/btree/commaleon/commaleon.rb",
-    "examples/centered_pdf_text_box.rb",
-    "examples/line_plotter.rb",
-    "examples/pdf_grouping.rb",
-    "examples/pdf_report_with_common_base.rb",
-    "examples/pdf_table.rb",
-    "examples/pdf_table_from_csv.rb",
-    "examples/pdf_table_simple.rb",
-    "examples/png_embed.rb",
-    "examples/row_renderer.rb",
-    "examples/simple_pdf_lines.rb",
-    "examples/simple_templating_example.rb",
-    "examples/tattle_ruby_version.rb",
-    "examples/tattle_rubygems_version.rb",
-    "examples/trac_ticket_status.rb",
-    "test/controller_test.rb",
-    "test/csv_formatter_test.rb",
-    "test/data_feeder_test.rb",
-    "test/grouping_test.rb",
-    "test/helpers.rb",
-    "test/html_formatter_test.rb",
-    "test/pdf_formatter_test.rb",
-    "test/record_test.rb",
-    "test/table_pivot_test.rb",
-    "test/table_test.rb",
-    "test/template_test.rb",
-    "test/text_formatter_test.rb"
-  ]
+  s.rubyforge_project = "ruport"
+  s.rubygems_version = "1.8.10"
+  s.summary = "A generalized Ruby report generation and templating engine."
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<fastercsv>, [">= 0"])
       s.add_runtime_dependency(%q<pdf-writer>, ["= 1.1.8"])
     else
-      s.add_dependency(%q<fastercsv>, [">= 0"])
       s.add_dependency(%q<pdf-writer>, ["= 1.1.8"])
     end
   else
-    s.add_dependency(%q<fastercsv>, [">= 0"])
     s.add_dependency(%q<pdf-writer>, ["= 1.1.8"])
   end
 end
